@@ -1,8 +1,14 @@
+import {Route, Routes} from "react-router-dom";
+import Home from "./pages/Home";
+import PageLayout from "./pages/PageLayout";
+
 function App() {
     return (
-        <div>
-            <h2>hello my friends</h2>
-        </div>
+        <Routes>
+            <Route element={<PageLayout/>}>
+                <Route path="/" element={<Home/>}/>
+            </Route>
+        </Routes>
     );
 }
 
