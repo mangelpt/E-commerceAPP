@@ -17,7 +17,7 @@ const Header = () => {
                 <Link to="/"><SmallLabel>SHOP</SmallLabel></Link>
                 <Link to="/"><SmallLabel>CONTACT</SmallLabel></Link>
                 <Link to="/"><SmallLabel>SING IN</SmallLabel></Link>
-                <div> <IconCart/> </div>
+                <div>  <IconCart/> </div>
             </Nav>
         </HeaderContainer>
     );

@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Grid = styled.section`
   display: grid;
   padding: 5px 30px;
-  //TODO: margin
   margin: 0 auto;
   width: 100%;
   //TODO: change this

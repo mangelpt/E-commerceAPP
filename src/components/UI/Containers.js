@@ -23,24 +23,16 @@ export const HeaderContainer = styled.header`
   }
 `;
 
-export const FooterContainer = styled.header(HeaderContainer)`
-  height: 70px;
+export const FooterContainer = styled.footer`
+  height: 50px;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   display: grid;
-  grid-auto-rows:70px ;
-  
-  @media only screen and ${Device.mobileS} {
-    margin-bottom: 90px;
-  }
-
-  @media only screen and ${Device.mobileM} {
-    margin-bottom: 90px;
-  }
-  @media only screen and ${Device.mobileL} {
-    margin-bottom: 80px;
-  }
-  @media only screen and ${Device.tablet} {
-    margin-bottom: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+  justify-items: center;
+  margin-top: 10px;
+  svg{
+    height: 20px;
+    fill: #4a4a4a;
   }
 `;
