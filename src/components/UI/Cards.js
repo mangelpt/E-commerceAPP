@@ -20,11 +20,10 @@ export const TinyCard = styled.div`
   text-align: center;
   width: 130px;
   padding: 10px;
-  background-color: rgb(187, 187, 187, .7);
+  background-color: rgb(187, 187, 187, .6);
   height: 100px;
   transition: all .3s ease-in-out;
   cursor: pointer;
-
   &:hover {
     background-color: rgb(170, 170, 170);
   }
