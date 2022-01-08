@@ -4,7 +4,6 @@ export const Nav =styled.nav`
   font-weight: 700;
   text-transform: uppercase;
   font-size: 20px;
-  background-color: blue;
   display: flex;
   justify-content: space-around;
   align-items: center;

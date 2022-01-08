@@ -2,10 +2,8 @@ import styled from "styled-components";
 import {Device} from "../Layout/reponsive/Devices";
 
 export const LogoContainer = styled.span`
-  background-color: palegreen;
   width: 100%;
   display: flex;
-
   @media only screen and ${Device.mobileS} {
     justify-content: center;
   }
