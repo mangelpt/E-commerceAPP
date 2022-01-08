@@ -12,6 +12,6 @@ export const Grid = styled.section`
   grid-auto-flow:dense;
   gap: ${props => props.gap}px;
   grid-template-columns: repeat(auto-fit, minmax(${props => props.size}px, 1fr));
-  grid-template-rows: repeat(${props => props.rows}, 245px);
+  grid-template-rows: repeat(${props => props.rows}, 350px);
 
 `;
