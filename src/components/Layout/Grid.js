@@ -7,7 +7,6 @@ export const Grid = styled.section`
   width: 100%;
   //TODO: change this
   height: fit-content;
-  background-color: orangered;
   grid-auto-flow: dense;
   gap: ${props => props.gap}px;
   grid-template-columns: repeat(auto-fit, minmax(${props => props.size}px, 1fr));
