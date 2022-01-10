@@ -10,9 +10,11 @@ import {IconCart} from "../../assets/Icons";
 const Header = () => {
     return (
         <HeaderContainer>
-            <LogoContainer>
-                <LogoIcon/>
-            </LogoContainer>
+            <Link to="/">
+                <LogoContainer>
+                    <LogoIcon/>
+                </LogoContainer>
+            </Link>
             <Nav>
                 <Link to="/"><SmallLabel>SHOP</SmallLabel></Link>
                 <Link to="/"><SmallLabel>CONTACT</SmallLabel></Link>

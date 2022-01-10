@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const BlackLabel = styled.h2`
+  text-transform: uppercase;
   color: rgba(0, 0, 0, 0.76);
   font-size: 24px;
 `;

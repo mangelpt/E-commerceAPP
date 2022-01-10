@@ -17,7 +17,7 @@ export const HeaderContainer = styled.header`
 `;
 
 export const FooterContainer = styled.footer`
-  border-top: 2px solid  #f2f2f2;
+  border-top: 2px solid #f2f2f2;
   height: 50px;
   width: 100%;
   display: grid;
@@ -25,11 +25,39 @@ export const FooterContainer = styled.footer`
   align-items: center;
   justify-items: center;
   margin-top: 10px;
-a{
-  text-decoration: none;
-}
+
+  a {
+    text-decoration: none;
+  }
+
   svg {
     height: 20px;
+    fill: #4a4a4a;
+  }
+`;
+
+export const CategoryContainer = styled.div`
+  height: 50px;
+  width: 100%;
+  background-color: darkgreen;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  align-items: center;
+  justify-items: center;
+  margin-top: 10px;
+
+  h5 {
+    justify-self: end;
+    margin-right: 10%;
+  }
+
+  h2 {
+    justify-self: start;
+    margin-left: 10%;
+  }
+
+  svg {
+    height: 30px;
     fill: #4a4a4a;
   }
 `;

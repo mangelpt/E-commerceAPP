@@ -1,10 +1,11 @@
 import React from 'react';
+import CategoryLabel from "../../components/Layout/CategoryLabel";
 
 const Mens = () => {
     return (
-        <div>
-        mens page
-        </div>
+        <>
+            <CategoryLabel categoryName={"mens"}/>
+        </>
     );
 };
 
