@@ -6,6 +6,7 @@ import Jackets from "./pages/jackets/Jackets";
 import Sneakers from "./pages/sneakers/Sneakers";
 import Women from "./pages/women/Womens";
 import Mens from "./pages/mens/Mens";
+import Offers from "./pages/ofers/Offers";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Route path="sneakers" element={<Sneakers/>}/>
                 <Route path="women" element={<Women/>}/>
                 <Route path="mens" element={<Mens/>}/>
+                <Route path="offers" element={<Offers/>}/>
             </Route>
         </Routes>
     );

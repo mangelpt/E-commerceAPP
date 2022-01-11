@@ -1,11 +1,11 @@
-import React from 'react';
-import CategoryLabel from "../../components/Layout/CategoryLabel";
 import {SHOP_DATA} from "../../Constants";
 import CardItem from "../../components/Layout/ItemsCard";
+import CategoryLabel from "../../components/Layout/CategoryLabel";
 import {Grid} from "../../components/Layout/Grid";
+import React from "react";
 
-const Jackets = () => {
-    const items = SHOP_DATA[2].items.map((item) =>
+const Offers = () => {
+    const items = SHOP_DATA[5].items.map((item) =>
         <CardItem
             key={item.id}
             image={item.imageUrl}
@@ -14,7 +14,7 @@ const Jackets = () => {
     )
     return (
         <>
-            <CategoryLabel categoryName={"JACKETS"}/>
+            <CategoryLabel categoryName={"HATS"}/>
             <Grid size={250} gap={10} rows={"auto"}>
                 {items}
             </Grid>
@@ -23,4 +23,4 @@ const Jackets = () => {
     );
 };
 
-export default Jackets;
+export default Offers;

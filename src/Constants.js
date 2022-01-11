@@ -40,8 +40,7 @@ export const CATEGORY2 = [
     }
 ]
 
-
-const SHOP_DATA = [
+export const SHOP_DATA = [
     {
         id: 1,
         title: 'Hats',
@@ -192,6 +191,18 @@ const SHOP_DATA = [
                 name: 'Tan Trench',
                 imageUrl: 'https://i.ibb.co/M6hHc3F/brown-trench.png',
                 price: 185
+            },
+            {
+                id: 6,
+                name: 'other',
+                imageUrl: 'https://picsum.photos/300/300',
+                price: 285
+            },
+            {
+                id: 5,
+                name: 'Tan',
+                imageUrl: 'https://picsum.photos/400/300',
+                price: 485
             }
         ]
     },
@@ -248,6 +259,7 @@ const SHOP_DATA = [
         id: 5,
         title: 'Mens',
         routeName: 'mens',
+        // eslint-disable-next-line no-sparse-arrays
         items: [
             {
                 id: 1,
@@ -285,6 +297,93 @@ const SHOP_DATA = [
                 imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
                 price: 25
             }
+            ,
+            {
+                id: 7,
+                name: 'random T-shirt',
+                imageUrl: 'https://picsum.photos/300/300',
+                price: 75
+            }
+            ,
+            {
+                id: 8,
+                name: 'another T-shirt',
+                imageUrl: 'https://picsum.photos/320/300',
+                price: 75
+            }
+            ,
+            {
+                id: 9,
+                name: 'east T-shirt',
+                imageUrl: 'https://picsum.photos/350/300',
+                price: 75
+            }
+        ]
+    },
+    {
+        id: 6,
+        title: 'offers',
+        routeName: 'offers',
+        // eslint-disable-next-line no-sparse-arrays
+        items: [
+            {
+                id: 1,
+                name: 'Camo Down Vest',
+                imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
+                price: 325
+            },
+            {
+                id: 2,
+                name: 'Floral T-shirt',
+                imageUrl: 'https://i.ibb.co/qMQ75QZ/floral-shirt.png',
+                price: 20
+            },
+            {
+                id: 3,
+                name: 'Black & White Longsleeve',
+                imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
+                price: 25
+            },
+            {
+                id: 4,
+                name: 'Pink T-shirt',
+                imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
+                price: 25
+            },
+            {
+                id: 5,
+                name: 'Jean Long Sleeve',
+                imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
+                price: 40
+            },
+            {
+                id: 6,
+                name: 'Burgundy T-shirt',
+                imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
+                price: 25
+            }
+            ,
+            {
+                id: 7,
+                name: 'random T-shirt',
+                imageUrl: 'https://picsum.photos/300/300',
+                price: 75
+            }
+            ,
+            {
+                id: 8,
+                name: 'another T-shirt',
+                imageUrl: 'https://picsum.photos/320/300',
+                price: 75
+            }
+            ,
+            {
+                id: 9,
+                name: 'east T-shirt',
+                imageUrl: 'https://picsum.photos/350/300',
+                price: 75
+            }
         ]
     }
+
 ]

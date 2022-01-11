@@ -27,3 +27,11 @@ export const SmallLabel = styled.h5`
   text-transform:capitalize;
 `;
 
+export const GenericLabel = styled.span`
+  color: #4a4a4a;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform:capitalize;
+`;
+
+

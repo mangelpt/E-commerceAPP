@@ -25,6 +25,7 @@ export const FooterContainer = styled.footer`
   align-items: center;
   justify-items: center;
   margin-top: 10px;
+  align-self: end;
 
   a {
     text-decoration: none;
@@ -39,7 +40,7 @@ export const FooterContainer = styled.footer`
 export const CategoryContainer = styled.div`
   height: 50px;
   width: 100%;
-  background-color: darkgreen;
+  border-bottom: 2px solid #f2f2f2;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   align-items: center;
@@ -61,3 +62,16 @@ export const CategoryContainer = styled.div`
     fill: #4a4a4a;
   }
 `;
+
+export const ItemCardContainer = styled.div`
+  height: fit-content;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ItemDetailsContainer = styled.section`
+  display: flex;
+  justify-content: space-between;
+`;
+

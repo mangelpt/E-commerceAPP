@@ -33,7 +33,6 @@ const Home = () => {
                 {Categories2}
             </Grid>
         </>
-
     );
 };
 
