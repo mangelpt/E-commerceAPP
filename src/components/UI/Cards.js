@@ -5,7 +5,6 @@ export const Card = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: palegoldenrod;
   height: ${props => props.height || 240}px;
   background-repeat: no-repeat;
   background-image: url(${props => props.image || "none"});
@@ -20,11 +19,11 @@ export const TinyCard = styled.div`
   text-align: center;
   width: 130px;
   padding: 10px;
-  background-color: rgb(187, 187, 187, .6);
+  background-color: ${props => props.color ||  'rgb(187, 187, 187, .6)'};
   height: 100px;
   transition: all .3s ease-in-out;
   cursor: pointer;
   &:hover {
-    background-color: rgb(170, 170, 170);
+    background-color: ${props => props.color ||  'rgb(170, 170, 170)'};
   }
 `;

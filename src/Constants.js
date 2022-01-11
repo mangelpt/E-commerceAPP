@@ -28,7 +28,7 @@ export const CATEGORY1 = [
 export const CATEGORY2 = [
     {
         id: 5,
-        name: 'women',
+        name: 'womens',
         text: "SHOP NOW",
         image: 'https://i.ibb.co/GCCdy8t/womens.png'
     },
@@ -199,7 +199,7 @@ export const SHOP_DATA = [
                 price: 285
             },
             {
-                id: 5,
+                id: 7,
                 name: 'Tan',
                 imageUrl: 'https://picsum.photos/400/300',
                 price: 485

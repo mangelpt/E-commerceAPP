@@ -7,10 +7,13 @@ import CardItem from "../../components/Layout/ItemsCard";
 const Hats = () => {
     const items = SHOP_DATA[0].items.map((item) =>
         <CardItem
+            id={item.id}
             key={item.id}
             image={item.imageUrl}
             price={item.price}
-            details={item.name}/>
+            name={item.name}
+            category="hats"
+        />
     )
     return (
         <>

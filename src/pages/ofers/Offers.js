@@ -7,14 +7,17 @@ import React from "react";
 const Offers = () => {
     const items = SHOP_DATA[5].items.map((item) =>
         <CardItem
+            id={item.id}
             key={item.id}
             image={item.imageUrl}
             price={item.price}
-            details={item.name}/>
+            name={item.name}
+            category="offers"
+        />
     )
     return (
         <>
-            <CategoryLabel categoryName={"HATS"}/>
+            <CategoryLabel categoryName={"OFFERS"}/>
             <Grid size={250} gap={10} rows={"auto"}>
                 {items}
             </Grid>

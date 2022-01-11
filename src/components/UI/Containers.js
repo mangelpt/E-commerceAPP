@@ -68,6 +68,15 @@ export const ItemCardContainer = styled.div`
   width: auto;
   display: flex;
   flex-direction: column;
+  transition: all .1s ease-in-out;
+
+  button {
+    display: none;
+  }
+
+  &:hover button {
+    display: block;
+  }
 `;
 
 export const ItemDetailsContainer = styled.section`

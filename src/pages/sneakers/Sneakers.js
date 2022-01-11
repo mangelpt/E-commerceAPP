@@ -7,10 +7,13 @@ import {Grid} from "../../components/Layout/Grid";
 const Sneakers = () => {
     const items = SHOP_DATA[1].items.map((item) =>
         <CardItem
+            id={item.id}
             key={item.id}
             image={item.imageUrl}
             price={item.price}
-            details={item.name}/>
+            name={item.name}
+            category="sneakers"
+        />
     )
     return (
         <>

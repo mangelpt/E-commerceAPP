@@ -6,7 +6,7 @@ export const Main = styled.main`
   @media only screen and ${Device.mobileS} {
     height:100%;
   }
-  @media only screen and ${Device.laptop} {
+  @media only screen and ${Device.tablet} {
     height:83vh;
   }
 `;
