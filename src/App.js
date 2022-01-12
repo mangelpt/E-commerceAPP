@@ -8,6 +8,7 @@ import Women from "./pages/women/Womens";
 import Mens from "./pages/mens/Mens";
 import Offers from "./pages/ofers/Offers";
 import Details from "./pages/Details";
+import Contact from "./pages/Contact";
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/mens/:itemId" element={<Details/>}/>
                 <Route path="offers" element={<Offers/>}/>
                 <Route path="/offers/:itemId" element={<Details/>}/>
+                <Route path="contact" element={<Contact/>}/>
             </Route>
         </Routes>
     );

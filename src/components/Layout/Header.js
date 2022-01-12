@@ -5,7 +5,7 @@ import {LogoContainer} from "../UI/LogoContainer";
 import {Nav} from "../UI/Nav";
 import {Link} from "react-router-dom";
 import { SmallLabel} from "../UI/Labels";
-import {IconCart} from "../../assets/Icons";
+import CollapsedComponent from "./CollapsiveCard";
 
 const Header = () => {
     return (
@@ -17,9 +17,9 @@ const Header = () => {
             </Link>
             <Nav>
                 <Link to="/"><SmallLabel>SHOP</SmallLabel></Link>
-                <Link to="/"><SmallLabel>CONTACT</SmallLabel></Link>
+                <Link to="Contact"><SmallLabel>CONTACT</SmallLabel></Link>
                 <Link to="/"><SmallLabel>SING IN</SmallLabel></Link>
-                <div>  <IconCart/> </div>
+                <CollapsedComponent/>
             </Nav>
         </HeaderContainer>
     );

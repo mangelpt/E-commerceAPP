@@ -1,10 +1,10 @@
 import React from 'react';
+import CollapsedComponent from "../components/Layout/CollapsiveCard";
+
 
 const Contact = () => {
     return (
-        <div>
-            this is contact Page
-        </div>
+            <CollapsedComponent/>
     );
 };
 

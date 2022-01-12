@@ -84,3 +84,59 @@ export const ItemDetailsContainer = styled.section`
   justify-content: space-between;
 `;
 
+export const CollapsibleContainer = styled.span`
+  cursor: pointer;
+  height: fit-content;
+  align-self: center;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 18px;
+  svg{
+    width: 45px;
+    position: absolute;
+    cursor: pointer;
+  }
+  span{
+    height: fit-content;
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+    font-size: 10px;
+    top: 1px;
+    left: 16px;
+  }
+`;
+
+export const CollapsibleContentContainer = styled.div`
+  margin-top: 30px;
+  position: absolute;
+  background-color: #f2f2f2;
+  top: 5%;
+  right: 2%;
+  display: ${props => props.collapsed && 'none'};
+  width: 30vw;
+  height: fit-content;
+  button{
+    width: 100%;
+    border-radius: 0;
+  }
+  @media only screen and ${Device.mobileS} {
+    top: 15%;
+    right: 2%;
+    width: 50vw;
+  }
+  @media only screen and ${Device.tablet} {
+    top: 5%;
+    right: 2%;
+    width: 20vw;
+  }
+`;
+
+export const MiniCartContainer = styled.div`
+  width: 100%;
+  margin: auto;
+  padding: 2px;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid gray;
+`;
