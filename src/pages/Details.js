@@ -18,7 +18,7 @@ const Details = () => {
     const cards = item.map((i) => <Fragment key={i.id}>
         <Card image={i.imageUrl} height="500">
         </Card>
-        <Card height="320">
+        <Card height="200">
             <ItemCardContainer>
                 <SmallLabel>price : $/ {i.price}</SmallLabel>
                 <SmallLabel>name : {i.name}</SmallLabel>
