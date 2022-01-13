@@ -36,7 +36,7 @@ const CollapsedComponent = ({button, children}) => {
                     quantity={20}
                 />
 
-                <Link to="/">
+                <Link to="checkout">
                     <TransparentButton>
                         go to checkout
                     </TransparentButton>

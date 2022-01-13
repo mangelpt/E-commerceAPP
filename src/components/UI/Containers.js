@@ -21,7 +21,7 @@ export const FooterContainer = styled.footer`
   height: 50px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   align-items: center;
   justify-items: center;
   margin-top: 10px;
@@ -42,7 +42,7 @@ export const CategoryContainer = styled.div`
   width: 100%;
   border-bottom: 2px solid #f2f2f2;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   align-items: center;
   justify-items: center;
   margin-top: 10px;
@@ -137,6 +137,11 @@ export const MiniCartContainer = styled.div`
   margin: auto;
   padding: 2px;
   display: flex;
+  align-items: center;
   justify-content: space-around;
   border: 1px solid gray;
+  span{
+    width:${props => props.width || '19%'};
+    text-align: center;
+  }
 `;

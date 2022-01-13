@@ -5,8 +5,8 @@ import {GenericLabel, SmallLabel} from "../UI/Labels";
 
 const ShoppingCardMini = ({image, quantity, price, name}) => {
     return (
-        <MiniCartContainer>
-            <Card image={image} height={100} width={20}/>
+        <MiniCartContainer width='30%'>
+            <Card image={image} height={80} width={20}/>
             <GenericLabel>
                 <SmallLabel>{name}</SmallLabel>
                 <SmallLabel>{quantity}x{price}</SmallLabel>

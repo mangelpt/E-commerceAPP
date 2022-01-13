@@ -9,6 +9,7 @@ import Mens from "./pages/mens/Mens";
 import Offers from "./pages/ofers/Offers";
 import Details from "./pages/Details";
 import Contact from "./pages/Contact";
+import Checkout from "./pages/Checkout";
 
 function App() {
     return (
@@ -16,7 +17,7 @@ function App() {
             <Route element={<PageLayout/>}>
                 <Route path="/" element={<Home/>}/>
                 <Route path="hats" element={<Hats/>}/>
-                <Route path="/hats/:itemId" element={<Details/>}/>
+                <Route path="hats/:itemId" element={<Details/>}/>
                 <Route path="jackets" element={<Jackets/>}/>
                 <Route path="/jackets/:itemId" element={<Details/>}/>
                 <Route path="sneakers" element={<Sneakers/>}/>
@@ -28,6 +29,7 @@ function App() {
                 <Route path="offers" element={<Offers/>}/>
                 <Route path="/offers/:itemId" element={<Details/>}/>
                 <Route path="contact" element={<Contact/>}/>
+                <Route path="checkout" element={<Checkout/>}/>
             </Route>
         </Routes>
     );
