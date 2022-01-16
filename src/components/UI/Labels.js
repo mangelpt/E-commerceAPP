@@ -32,6 +32,12 @@ export const GenericLabel = styled.span`
   font-weight: 400;
   font-size: 16px;
   text-transform:capitalize;
+  display: flex;
+  justify-content: center;
+  svg{
+    color: #4a4a4a;
+    width: 20px;
+  }
 `;
 
 
