@@ -28,7 +28,7 @@ export const SmallLabel = styled.h5`
 `;
 
 export const GenericLabel = styled.span`
-  color: #4a4a4a;
+  color:${props => props.color && ' #4a4a4a'};
   font-weight: 400;
   font-size: 16px;
   text-transform:capitalize;
@@ -36,7 +36,8 @@ export const GenericLabel = styled.span`
   justify-content: center;
   svg{
     color: #4a4a4a;
-    width: 20px;
+    width: 23px;
+    cursor: pointer;
   }
 `;
 

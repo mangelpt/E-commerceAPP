@@ -9,7 +9,7 @@ const ShoppingCardMini = ({image, quantity, price, name}) => {
             <Card image={image} height={80} width={20}/>
             <GenericLabel>
                 <SmallLabel>{name}</SmallLabel>
-                <SmallLabel>{quantity}x{price}</SmallLabel>
+                <SmallLabel>{quantity}x${price}</SmallLabel>
             </GenericLabel>
         </MiniCartContainer>
     );

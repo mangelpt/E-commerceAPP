@@ -1,41 +1,35 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {CollapsibleContainer, CollapsibleContentContainer} from "../UI/Containers";
 import {IconCart} from "../../assets/Icons";
 import {GenericLabel} from "../UI/Labels";
 import ShoppingCardMini from "./ShoppingCardMini";
 import {TransparentButton} from "../UI/Buttons";
 import {Link} from "react-router-dom";
-
+import {useSelector, useDispatch} from 'react-redux'
+import {toggleCart} from "../../store/CartUIslice";
 
 const CollapsedComponent = ({button, children}) => {
-    const [isCollapsed, setIsCollapsed] = useState(true);
-
+    const {items,totalQuantity} = useSelector((state) => state.CartSlice);
+    console.log(totalQuantity)
+    const dispatch = useDispatch();
+    const toggleState = useSelector((state) => state.CartUiSlice.cartIsVisible);
+    const cartItems = items.map((item) =>
+        <ShoppingCardMini
+            key={item.id}
+            price={item.price}
+            name={item.name}
+            image={item.imageUrl}
+            quantity={item.quantity}
+        />
+    );
     return (
         <>
-            <CollapsibleContainer onClick={() => setIsCollapsed(!isCollapsed)}>
+            <CollapsibleContainer onClick={() => dispatch(toggleCart())}>
                 <IconCart/>
-                <GenericLabel>10</GenericLabel>
+                <GenericLabel color="#000">{totalQuantity}</GenericLabel>
             </CollapsibleContainer>
-            <CollapsibleContentContainer collapsed={isCollapsed}>
-                <ShoppingCardMini
-                    price={20}
-                    name={"test"}
-                    image="https://picsum.photos/200/300"
-                    quantity={20}
-                />
-                <ShoppingCardMini
-                    price={20}
-                    name={"test"}
-                    image="https://picsum.photos/200/300"
-                    quantity={20}
-                />
-                <ShoppingCardMini
-                    price={20}
-                    name={"test"}
-                    image="https://picsum.photos/200/300"
-                    quantity={20}
-                />
-
+            <CollapsibleContentContainer collapsed={toggleState}>
+                {cartItems}
                 <Link to="checkout">
                     <TransparentButton>
                         go to checkout

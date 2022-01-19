@@ -1,14 +1,21 @@
 import React from 'react';
 import CheckoutLabel from "../components/Layout/CheckoutLabel";
 import CheckoutCard from "../components/Layout/CheckoutCard";
+import {useSelector} from "react-redux";
 
 const Checkout = () => {
+    const {items} = useSelector((state) => state.CartSlice);
+    const cartItems = items.map((item) =>
+        <CheckoutCard
+            key={item.id}
+            name={item.name}
+            price={item.totalPrice}
+            quantity={item.quantity} image={item.imageUrl}/>
+    );
     return (
         <>
-           <CheckoutLabel/>
-            <CheckoutCard name={"test"} price={200} quantity={12} image='https://picsum.photos/200/300'/>
-            <CheckoutCard name={"test"} price={200} quantity={12} image='https://picsum.photos/200/300'/>
-            <CheckoutCard name={"test"} price={200} quantity={12} image='https://picsum.photos/200/300'/>
+            <CheckoutLabel/>
+            {cartItems}
         </>
     );
 };

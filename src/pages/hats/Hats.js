@@ -2,7 +2,7 @@ import React from 'react';
 import CategoryLabel from "../../components/Layout/CategoryLabel";
 import {Grid} from "../../components/Layout/Grid";
 import {SHOP_DATA} from "../../Constants";
-import CardItem from "../../components/Layout/ItemsCard";
+import CardItem from "../../components/Layout/CardItem";
 
 const Hats = () => {
     const items = SHOP_DATA[0].items.map((item) =>

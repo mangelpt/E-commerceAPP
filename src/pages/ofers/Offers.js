@@ -1,5 +1,5 @@
 import {SHOP_DATA} from "../../Constants";
-import CardItem from "../../components/Layout/ItemsCard";
+import CardItem from "../../components/Layout/CardItem";
 import CategoryLabel from "../../components/Layout/CategoryLabel";
 import {Grid} from "../../components/Layout/Grid";
 import React from "react";

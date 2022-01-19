@@ -1,7 +1,7 @@
 import React from 'react';
 import CategoryLabel from "../../components/Layout/CategoryLabel";
 import {SHOP_DATA} from "../../Constants";
-import CardItem from "../../components/Layout/ItemsCard";
+import CardItem from "../../components/Layout/CardItem";
 import {Grid} from "../../components/Layout/Grid";
 
 const Sneakers = () => {

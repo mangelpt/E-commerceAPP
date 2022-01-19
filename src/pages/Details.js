@@ -8,32 +8,40 @@ import {useParams} from "react-router-dom";
 import {useLocation} from 'react-router-dom';
 import {SHOP_DATA} from "../Constants";
 import {ItemCardContainer} from "../components/UI/Containers";
+import {useDispatch} from "react-redux";
+import {addItemToCart} from "../store/CartSlice";
 
 const Details = () => {
+    const dispatch=useDispatch();
     let {itemId} = useParams();
     let location = useLocation();
     const path = location.pathname.trim().replace(/[/\\\d]/gi, "");
     const [FilteredItems] = SHOP_DATA.filter((item) => item.routeName === path);
     const item = FilteredItems.items.filter((item) => item.id === +itemId);
-    const cards = item.map((i) => <Fragment key={i.id}>
-        <Card image={i.imageUrl} height="500">
-        </Card>
-        <Card height="200">
-            <ItemCardContainer>
-                <SmallLabel>price : $/ {i.price}</SmallLabel>
-                <SmallLabel>name : {i.name}</SmallLabel>
-                <SmallLabel>this is the best </SmallLabel>
-            </ItemCardContainer>
-            <TinyCard color="transparent">
-                <TransparentButton>
-                    add to cart
-                </TransparentButton>
-            </TinyCard>
-        </Card>
-    </Fragment>)
+    const addToCartHandler = () => {
+        const [itemToAdd] = item;
+        console.log(itemToAdd)
+        dispatch(addItemToCart(itemToAdd));
+    }
+    const cards = item.map((i) =>
+        <Fragment key={i.id}>
+            <Card image={i.imageUrl} height="500">
+            </Card>
+            <Card height="200">
+                <ItemCardContainer>
+                    <SmallLabel>price : $/ {i.price}</SmallLabel>
+                    <SmallLabel>name : {i.name}</SmallLabel>
+                    <SmallLabel>this is the best </SmallLabel>
+                </ItemCardContainer>
+                <TinyCard color="transparent">
+                    <TransparentButton onClick={addToCartHandler}>
+                        add to cart
+                    </TransparentButton>
+                </TinyCard>
+            </Card>
+        </Fragment>)
     return (
         <>
-
             <CategoryLabel categoryName={path}/>
             <Grid size={400} gap={10} rows={"auto"}>
                 {cards}

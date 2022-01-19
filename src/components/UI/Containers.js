@@ -102,7 +102,7 @@ export const CollapsibleContainer = styled.span`
     color: #fff;
     font-weight: bold;
     font-size: 10px;
-    top: 1px;
+    top: 12px;
     left: 16px;
   }
 `;
