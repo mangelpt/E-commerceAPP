@@ -20,7 +20,6 @@ const Details = () => {
     const item = FilteredItems.items.filter((item) => item.id === +itemId);
     const addToCartHandler = () => {
         const [itemToAdd] = item;
-        console.log(itemToAdd)
         dispatch(addItemToCart(itemToAdd));
     }
     const cards = item.map((i) =>

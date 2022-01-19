@@ -3,22 +3,25 @@ import {MiniCartContainer} from "../UI/Containers";
 import {Card} from "../UI/Cards";
 import {GenericLabel} from "../UI/Labels";
 import {ArrowLeft, ArrowRight, CloseButton} from "../../assets/Icons";
+import {useDispatch} from "react-redux";
+import {addItemToCart} from "../../store/CartSlice";
 
-const CheckoutCard = ({image, name, quantity, price}) => {
+const CheckoutCard = (props) => {
+    const dispatch=useDispatch();
     return (
         <MiniCartContainer>
-            <Card image={image} height={150} width={20}/>
-            <GenericLabel>{name}</GenericLabel>
+            <Card image={props.imageUrl} height={150} width={20}/>
+            <GenericLabel>{props.name}</GenericLabel>
             <GenericLabel>
-                <GenericLabel>
+                <GenericLabel >
                     <ArrowLeft/>
                 </GenericLabel>
-                {quantity}
-                <GenericLabel>
+                {props.quantity}
+                <GenericLabel onClick={()=>dispatch(addItemToCart(props))}>
                     <ArrowRight/>
                 </GenericLabel>
             </GenericLabel>
-            <GenericLabel>${price}</GenericLabel>
+            <GenericLabel>${props.totalPrice}</GenericLabel>
             <GenericLabel>
                 <CloseButton/>
             </GenericLabel>
