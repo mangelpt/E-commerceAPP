@@ -4,7 +4,7 @@ import {Card} from "../UI/Cards";
 import {GenericLabel} from "../UI/Labels";
 import {ArrowLeft, ArrowRight, CloseButton} from "../../assets/Icons";
 import {useDispatch} from "react-redux";
-import {addItemToCart, removeItemToCart} from "../../store/CartSlice";
+import {addItemToCart, removeItemToCart, removeDirectToCart} from "../../store/CartSlice";
 
 const CheckoutCard = (props) => {
     const dispatch = useDispatch();
@@ -22,7 +22,7 @@ const CheckoutCard = (props) => {
                 </GenericLabel>
             </GenericLabel>
             <GenericLabel>${props.totalPrice}</GenericLabel>
-            <GenericLabel>
+            <GenericLabel onClick={() => dispatch(removeDirectToCart(props.id))}>
                 <CloseButton/>
             </GenericLabel>
         </MiniCartContainer>
