@@ -4,20 +4,20 @@ import {Card} from "../UI/Cards";
 import {GenericLabel} from "../UI/Labels";
 import {ArrowLeft, ArrowRight, CloseButton} from "../../assets/Icons";
 import {useDispatch} from "react-redux";
-import {addItemToCart} from "../../store/CartSlice";
+import {addItemToCart, removeItemToCart} from "../../store/CartSlice";
 
 const CheckoutCard = (props) => {
-    const dispatch=useDispatch();
+    const dispatch = useDispatch();
     return (
         <MiniCartContainer>
             <Card image={props.imageUrl} height={150} width={20}/>
             <GenericLabel>{props.name}</GenericLabel>
             <GenericLabel>
-                <GenericLabel >
+                <GenericLabel onClick={() => dispatch(removeItemToCart(props.id))}>
                     <ArrowLeft/>
                 </GenericLabel>
                 {props.quantity}
-                <GenericLabel onClick={()=>dispatch(addItemToCart(props))}>
+                <GenericLabel onClick={() => dispatch(addItemToCart(props))}>
                     <ArrowRight/>
                 </GenericLabel>
             </GenericLabel>

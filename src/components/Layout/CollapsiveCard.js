@@ -9,7 +9,7 @@ import {useSelector, useDispatch} from 'react-redux'
 import {toggleCart} from "../../store/CartUIslice";
 
 const CollapsedComponent = ({button, children}) => {
-    const {items,totalQuantity} = useSelector((state) => state.CartSlice);
+    const {items, totalQuantity} = useSelector((state) => state.CartSlice);
     console.log(totalQuantity)
     const dispatch = useDispatch();
     const toggleState = useSelector((state) => state.CartUiSlice.cartIsVisible);
@@ -31,7 +31,7 @@ const CollapsedComponent = ({button, children}) => {
             <CollapsibleContentContainer collapsed={toggleState}>
                 {cartItems}
                 <Link to="checkout">
-                    <TransparentButton>
+                    <TransparentButton onClick={() => dispatch(toggleCart())}>
                         go to checkout
                     </TransparentButton>
                 </Link>
