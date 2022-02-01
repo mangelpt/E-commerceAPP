@@ -24,21 +24,27 @@ export const SmallLabel = styled.h5`
   color: #4a4a4a;
   font-weight: 400;
   font-size: 16px;
-  text-transform:capitalize;
+  text-transform: capitalize;
 `;
 
 export const GenericLabel = styled.span`
-  color:${props => props.color && ' #4a4a4a'};
+  color: ${props => props.color && ' #4a4a4a'};
   font-weight: 400;
   font-size: 16px;
-  text-transform:capitalize;
+  text-transform: capitalize;
   display: flex;
   justify-content: center;
-  svg{
+
+  svg {
     color: #4a4a4a;
     width: 23px;
     cursor: pointer;
   }
 `;
 
-
+export const Label = styled.label`
+  color: #4a4a4a;
+  font-size: 16px;
+  text-transform: capitalize;
+  background-color: transparent;
+`;

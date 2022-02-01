@@ -1,10 +1,11 @@
 import React from 'react';
+import SignIn from "../components/Layout/FormSignIn";
 
 const Login = () => {
     return (
-        <div>
-            THIS IS LOGIN PAGE
-        </div>
+        <>
+            <SignIn/>
+        </>
     );
 };
 

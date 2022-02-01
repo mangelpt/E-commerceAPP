@@ -10,6 +10,7 @@ import Offers from "./pages/ofers/Offers";
 import Details from "./pages/Details";
 import Contact from "./pages/Contact";
 import Checkout from "./pages/Checkout";
+import Login from "./pages/Login";
 
 function App() {
     return (
@@ -29,6 +30,7 @@ function App() {
                 <Route path="offers" element={<Offers/>}/>
                 <Route path="/offers/:itemId" element={<Details/>}/>
                 <Route path="contact" element={<Contact/>}/>
+                <Route path="login" element={<Login/>}/>
                 <Route path="checkout" element={<Checkout/>}/>
             </Route>
         </Routes>

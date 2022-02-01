@@ -145,3 +145,18 @@ export const MiniCartContainer = styled.div`
     text-align: center;
   }
 `;
+
+export const FormContainer =styled.div`
+  background-color: transparent;
+  border:1px solid gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  @media only screen and ${Device.mobileS} {
+    width: 80vw;
+  }
+  @media only screen and ${Device.tablet} {
+    width: 400px;
+  }
+`;
