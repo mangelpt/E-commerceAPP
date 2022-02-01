@@ -10,10 +10,10 @@ const SignIn = () => {
         <FormContainer>
             <LargeLabel>Login</LargeLabel>
             <Form>
-                <Label htmlFor="email">email</Label>
-                <Input type="email" id="email"/>
-                <Label htmlFor="password">password</Label>
-                <Input type="password" id="password"/>
+                <Label htmlFor="email1">email</Label>
+                <Input type="email" id="email1"/>
+                <Label htmlFor="password1">password</Label>
+                <Input type="password" id="password1"/>
                 <ItemDetailsContainer>
                     <SignInButton>SIGN IN</SignInButton>
                     <SignInGoogleButton>SIGN IN WITH GOOGLE</SignInGoogleButton>

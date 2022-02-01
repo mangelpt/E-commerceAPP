@@ -1,5 +1,5 @@
 import React from 'react';
-import SignIn from "../components/Layout/FormSignIn";
+import SignIn from "../components/Layout/SignInForm";
 import CreateAccountForm from "../components/Layout/CreateAccountForm";
 import {Grid} from "../components/Layout/Grid";
 

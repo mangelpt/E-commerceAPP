@@ -1,9 +1,12 @@
 import React from 'react';
+import ContactForm from "../components/Layout/ContactForm";
 
 
 const Contact = () => {
     return (
-          <h2>holA</h2>
+        <>
+            <ContactForm/>
+        </>
     );
 };
 
