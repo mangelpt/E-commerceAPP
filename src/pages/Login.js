@@ -1,10 +1,15 @@
 import React from 'react';
 import SignIn from "../components/Layout/FormSignIn";
+import CreateAccountForm from "../components/Layout/CreateAccountForm";
+import {Grid} from "../components/Layout/Grid";
 
 const Login = () => {
     return (
         <>
-            <SignIn/>
+            <Grid size={350} gap={10} rows={"auto"}>
+                <SignIn/>
+                <CreateAccountForm/>
+            </Grid>
         </>
     );
 };

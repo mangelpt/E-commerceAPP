@@ -18,7 +18,7 @@ const Header = () => {
             <Nav>
                 <Link to="/"><SmallLabel>SHOP</SmallLabel></Link>
                 <Link to="Contact"><SmallLabel>CONTACT</SmallLabel></Link>
-                <Link to="/login"><SmallLabel>SING IN</SmallLabel></Link>
+                <Link to="/login"><SmallLabel>SIGN IN</SmallLabel></Link>
                 <CollapsedComponent/>
             </Nav>
         </HeaderContainer>

@@ -1,19 +1,24 @@
 import React from 'react';
-import {SignInForm} from "../UI/SignInForm";
-import {FormContainer} from "../UI/Containers";
+import {Form} from "../UI/Form";
+import {FormContainer, ItemDetailsContainer} from "../UI/Containers";
 import {Label, LargeLabel} from "../UI/Labels";
 import {Input} from "../UI/Input";
+import {SignInButton, SignInGoogleButton} from "../UI/Buttons";
 
 const SignIn = () => {
     return (
         <FormContainer>
             <LargeLabel>Login</LargeLabel>
-            <SignInForm>
+            <Form>
                 <Label htmlFor="email">email</Label>
                 <Input type="email" id="email"/>
                 <Label htmlFor="password">password</Label>
                 <Input type="password" id="password"/>
-            </SignInForm>
+                <ItemDetailsContainer>
+                    <SignInButton>SIGN IN</SignInButton>
+                    <SignInGoogleButton>SIGN IN WITH GOOGLE</SignInGoogleButton>
+                </ItemDetailsContainer>
+            </Form>
         </FormContainer>
     );
 };

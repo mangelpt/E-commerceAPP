@@ -18,5 +18,5 @@ export const SignInButton=styled(TransparentButton)`
 `;
 
 export const SignInGoogleButton=styled(TransparentButton)`
-  background-color: blue;
+  background-color: rgba(64, 129, 236, 0.7);
 `;
