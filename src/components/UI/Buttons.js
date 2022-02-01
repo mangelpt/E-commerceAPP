@@ -12,3 +12,11 @@ export const TransparentButton = styled.button`
     border: 1px solid rgba(193, 140, 2,.9);
   }
 `;
+
+export const SignInButton=styled(TransparentButton)`
+  background-color: #0000;
+`;
+
+export const SignInGoogleButton=styled(TransparentButton)`
+  background-color: blue;
+`;
