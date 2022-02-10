@@ -1,11 +1,12 @@
-import {SHOP_DATA} from "../../Constants";
 import CardItem from "../../components/Layout/CardItem";
 import CategoryLabel from "../../components/Layout/CategoryLabel";
 import {Grid} from "../../components/Layout/Grid";
 import React from "react";
+import {useSelector} from "react-redux";
 
 const Offers = () => {
-    const items = SHOP_DATA[5].items.map((item) =>
+    const {items} = useSelector((state) => state.productsSlice);
+    const offerItems = items[5].items.map((item) =>
         <CardItem
             id={item.id}
             key={item.id}
@@ -19,7 +20,7 @@ const Offers = () => {
         <>
             <CategoryLabel categoryName={"OFFERS"}/>
             <Grid size={250} gap={10} rows={"auto"}>
-                {items}
+                {offerItems}
             </Grid>
         </>
 

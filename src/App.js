@@ -11,8 +11,15 @@ import Details from "./pages/Details";
 import Contact from "./pages/Contact";
 import Checkout from "./pages/Checkout";
 import Login from "./pages/Login";
+import {useEffect} from "react";
+import {fetchData} from "./store/productActions";
+import {useDispatch} from "react-redux";
 
 function App() {
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(fetchData())
+    }, [dispatch])
     return (
         <Routes>
             <Route element={<PageLayout/>}>

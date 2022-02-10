@@ -1,11 +1,12 @@
 import React from 'react';
 import CategoryLabel from "../../components/Layout/CategoryLabel";
-import {SHOP_DATA} from "../../Constants";
 import CardItem from "../../components/Layout/CardItem";
 import {Grid} from "../../components/Layout/Grid";
+import {useSelector} from "react-redux";
 
 const Jackets = () => {
-    const items = SHOP_DATA[2].items.map((item) =>
+    const {items} = useSelector((state)=>state.productsSlice);
+    const jackets_items = items[2].items.map((item) =>
         <CardItem
             id={item.id}
             key={item.id}
@@ -20,7 +21,7 @@ const Jackets = () => {
         <>
             <CategoryLabel categoryName={"JACKETS"}/>
             <Grid size={250} gap={10} rows={"auto"}>
-                {items}
+                {jackets_items}
             </Grid>
         </>
 

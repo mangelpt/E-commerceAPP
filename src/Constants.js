@@ -24,7 +24,7 @@ export const CATEGORY1 = [
         image: 'https://i.ibb.co/cvpntL1/hats.png'
     }
 ]
-
+export const baseUrl="https://api-node-clients.herokuapp.com/products"
 export const CATEGORY2 = [
     {
         id: 5,
