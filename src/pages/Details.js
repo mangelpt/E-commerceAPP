@@ -15,8 +15,8 @@ const Details = () => {
     const dispatch = useDispatch();
     let {itemId} = useParams();
     let location = useLocation();
-    console.log(location.pathname);
     const path = location.pathname.trim().replace(/[/\\\d]/gi, "");
+
     const [FilteredItems] = items.filter((item) => item.routeName === path);
     const item = FilteredItems.items.filter((item) => item.id === +itemId);
 
