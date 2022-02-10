@@ -5,7 +5,8 @@ import {Grid} from "../../components/Layout/Grid";
 import {useSelector} from "react-redux";
 
 const Jackets = () => {
-    const {items} = useSelector((state)=>state.productsSlice);
+    const {items} = useSelector((state) => state.productsSlice);
+    console.log(items)
     const jackets_items = items[2].items.map((item) =>
         <CardItem
             id={item.id}
@@ -15,7 +16,6 @@ const Jackets = () => {
             name={item.name}
             category="jackets"
         />
-
     )
     return (
         <>
