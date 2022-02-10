@@ -12,12 +12,14 @@ import {useDispatch} from "react-redux";
 import {addItemToCart} from "../store/CartSlice";
 
 const Details = () => {
-    const dispatch=useDispatch();
+    const dispatch = useDispatch();
     let {itemId} = useParams();
     let location = useLocation();
+    console.log(location.pathname);
     const path = location.pathname.trim().replace(/[/\\\d]/gi, "");
     const [FilteredItems] = SHOP_DATA.filter((item) => item.routeName === path);
     const item = FilteredItems.items.filter((item) => item.id === +itemId);
+
     const addToCartHandler = () => {
         const [itemToAdd] = item;
         dispatch(addItemToCart(itemToAdd));

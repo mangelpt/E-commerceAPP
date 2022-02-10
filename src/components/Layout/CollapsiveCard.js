@@ -10,7 +10,6 @@ import {toggleCart} from "../../store/CartUIslice";
 
 const CollapsedComponent = ({button, children}) => {
     const {items, totalQuantity} = useSelector((state) => state.CartSlice);
-    console.log(totalQuantity)
     const dispatch = useDispatch();
     const toggleState = useSelector((state) => state.CartUiSlice.cartIsVisible);
     const cartItems = items.map((item) =>
