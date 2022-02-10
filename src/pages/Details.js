@@ -6,18 +6,18 @@ import {SmallLabel} from "../components/UI/Labels";
 import CategoryLabel from "../components/Layout/CategoryLabel";
 import {useParams} from "react-router-dom";
 import {useLocation} from 'react-router-dom';
-import {SHOP_DATA} from "../Constants";
 import {ItemCardContainer} from "../components/UI/Containers";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {addItemToCart} from "../store/CartSlice";
 
 const Details = () => {
+    const {items} = useSelector((state) => state.productsSlice);
     const dispatch = useDispatch();
     let {itemId} = useParams();
     let location = useLocation();
-    console.log(location.pathname);
     const path = location.pathname.trim().replace(/[/\\\d]/gi, "");
-    const [FilteredItems] = SHOP_DATA.filter((item) => item.routeName === path);
+
+    const [FilteredItems] = items.filter((item) => item.routeName === path);
     const item = FilteredItems.items.filter((item) => item.id === +itemId);
 
     const addToCartHandler = () => {
