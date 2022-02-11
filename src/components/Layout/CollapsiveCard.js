@@ -25,7 +25,7 @@ const CollapsedComponent = ({button, children}) => {
         <>
             <CollapsibleContainer onClick={() => dispatch(toggleCart())}>
                 <IconCart/>
-                <GenericLabel color="#000">{totalQuantity}</GenericLabel>
+                <GenericLabel color="#F25A1D">{totalQuantity}</GenericLabel>
             </CollapsibleContainer>
             <CollapsibleContentContainer collapsed={toggleState}>
                 {cartItems}

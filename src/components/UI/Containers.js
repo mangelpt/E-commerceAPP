@@ -99,11 +99,11 @@ export const CollapsibleContainer = styled.span`
   span{
     height: fit-content;
     position: relative;
-    color: #fff;
+    color: orangered;
     font-weight: bold;
-    font-size: 10px;
-    top: 12px;
-    left: 16px;
+    font-size: 14px;
+    top: 9px;
+    left: 14px;
   }
 `;
 
